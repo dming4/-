@@ -1,0 +1,125 @@
+https://github.com/maximegris/angular-electron
+
+目前nodejs调用c++主流的有两种方法，分别是addons和ffi
+
+Linux下gcc编译生成动态链接库*.so文件并调用它
+https://www.cnblogs.com/huangxinzhen/p/4047051.html
+
+npm install --save bindings
+npm install --save bindings
+node-gyp rebuild
+node --napi-modules app.js
+
+gcc test.c  -fPIC -shared -o libtest.so
+
+gcc hello.cc -L. -testso -o test
+
+npm install ffi@gavignus/node-ffi#torycl/forceset-fix --save
+
+sudo apt-get install git-core
+
+sudo apt-get install gcc-4.8
+
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 100
+
+sudo apt-get install g++-4.8
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 100
+nm -D test.so
+
+chrome://inspect/#devices
+
+uname -m
+
+--进程
+gnome-system-monitor
+使用 sudo nautilus 进入ubuntu 文件管理器。可以随意复制，删除，粘贴，无权限限制
+
+--
+npm install xml2js
+
+Ubuntu下的安装方法:
+sudo add-apt-repository ppa:notepadqq-team/notepadqq
+sudo apt-get update
+sudo apt-get install notepadqq
+
+
+
+JSON.parse()与JSON.stringify()的区别
+JSON.parse()【从一个字符串中解析出json对象】
+
+例子：
+
+//定义一个字符串
+
+var data='{"name":"goatling"}'
+
+//解析对象​
+
+​JSON.parse(data)
+
+结果是：
+
+​name:"goatling"
+
+JSON.stringify()【从一个对象中解析出字符串】
+
+var data={name:'goatling'}
+
+JSON.stringify(data)
+
+结果是：
+
+'{"name":"goatling"}'
+
+
+
+https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details
+出现No space left on device错误解决办法
+问题原因:You may have reached your quota of watches.
+
+
+
+　　查看目前的最大值
+
+To find your current limit, type this in your terminal:
+1
+	
+$cat /proc/sys/fs/inotify/max_user_watches
+
+ 
+
+　　增加最大值
+
+Which is typically 8192 by default.
+
+To increase your limit, type this:
+1
+	
+$sudo sysctl fs.inotify.max_user_watches=16384
+so 
+ 
+
+　　永久设置最大值
+
+Then restart django.
+
+To permanently set this limit, type this:
+1
+	
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+
+
+
+
+ng g c components/bettype/win_pla
+
+Linux如何查看端口
+lsof -i:端口号 用于查看某一端口的占用情况，比如查看8000端口使用情况，lsof -i:8000
+
+
+2019-03-15
+.a.b{}  <div class='a b'></div>
+.a .b{}  <div class='a'><span class='b'></span></div>
+
+css中两个类选择器之间没有空格形成多类选择器， 有空格形成后代选择器  。 
