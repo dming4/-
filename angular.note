@@ -1,0 +1,8 @@
+创建一个带路由的特性模块
+ng generate module components/marksix --routing
+
+
+npm install swiper --save
+npm install @types/swiper --save  //安装模组定义档
+
+
